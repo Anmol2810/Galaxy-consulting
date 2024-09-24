@@ -22,14 +22,24 @@
             <a href="#contact" class="contact_btn">contact us</a>
         </nav>
         <div class="icons">
-          <div class="fas fa-bars" id ="menu-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
         </div>
-          <div class="button" id="dscontact">
+
+        <!-- Book Services Button with Dropdown -->
+        <div class="button" id="dscontact">
             <span class="button_lg">
                 <span class="button_sl"></span>
-                <span class="button_text"><a href="#contact">BOOK SERVICES</a></span>
+                <span class="button_text">
+                    <a href="#contact">BOOK SERVICES</a>
+                </span>
             </span>
-          </div>
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <p><strong><i class="fa-solid fa-phone"></i></strong> 236-660-8562</p>
+                <p><strong><i class="fa-solid fa-envelope"></i></strong> sushantgalaxy.14@gmail.com</p>
+            </div>
+        </div>
     </header>
     <!---------------------------------------Home section Starts--------------------------------->
     <section class="home" id="home">
@@ -37,22 +47,6 @@
                 <p class="hero-header">Welcome to <span>Galaxy Cosulting</span></p>
                 <p class="secondary">Our expertise set us apart.</p>
             </div>
-            <a href="explore.html"><button class="explore-btn">
-                <span>Explore</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 74 74"
-                  height="34"
-                  width="34"
-                >
-                  <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
-                  <path
-                    fill="black"
-                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                  ></path>
-                </svg>
-              </button></a>
     </section>
     <!---------------------------------------Home section ends--------------------------------->
     <!---------------------------------------About us section Starts--------------------------------->
@@ -106,9 +100,23 @@
                     </p>
                 </div>
             </div>
-            
+            <a href="explore.html"><button class="explore-btn">
+                <span>Explore More About Our Services</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 74 74"
+                  height="34"
+                  width="34"
+                >
+                  <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
+                  <path
+                    fill="black"
+                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                  ></path>
+                </svg>
+              </button></a>
         </div>
-        <a href="explore.html">Explore more about our services</a>
     </section>
     <!----------------------------------------------feature section starts--------------------------------------------------------->
     <section id="features">
@@ -168,18 +176,18 @@
         <div class="divider"></div>
         <article class="custom-review">
             <div class="review-img-container">
-                <img src="https://images.unsplash.com/photo-1568044852337-9bcc3378fc3c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODA4Nzc4OA&ixlib=rb-1.2.1&q=85" id="person-img" alt="" />
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" id="person-img" alt="Review Person" />
             </div>
             <h4 id="review-author">John Doe</h4>
             <p id="review-job">⭐⭐⭐⭐⭐</p>
             <p id="review-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores debitis incidunt, eius earum ipsam cupiditate libero? Iste, doloremque nihil?
+                Fantastic service! The cleaners are efficient, and the manpower consulting was a game changer for our staffing needs. Highly recommended!
             </p>
         </article>
-    </section>
-    
+    </section>    
+
     <!-----------------Contact section---------------------->
-    <section id="contact">
+    <section id="contact" class="container">
         <h1 class="heading">Contact Us</h1>
         <div class="divider"></div>
         <div class="contact-container">
@@ -195,7 +203,7 @@
             </div>
             <div class="form-container">
                 <h2>Send Us a Message</h2>
-                <form action="" method="post">
+                <form action="" method="" reset()>
                     <input type="text" name="name" placeholder="Your Name" required />
                     <input type="email" name="email" placeholder="Your Email" required />
                     <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
@@ -217,7 +225,7 @@
             </div>
             <div class="contact-info">
                 <p>Email: sushantgalaxy.14@gmail.com</p>
-                <p>Phone: (123) 456-7890</p>
+                <p>Phone: 236-660-8562</p>
             </div>
         </div>
     </footer>

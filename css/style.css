@@ -84,6 +84,50 @@ html::-webkit-scrollbar-thumb{
   font-weight: bold;
 }
 
+#dscontact {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 50%;
+  transform: translateX(-60%); /* Center the dropdown relative to the button */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+.dropdown p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+/* Show the dropdown on hover */
+#dscontact:hover .dropdown {
+  display: block;
+}
+
+/* Optional hover effects for dropdown */
+.dropdown p:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ensure dropdown fits within the screen */
+@media (max-width: 768px) {
+  .dropdown {
+      left: auto;
+      right: 0;
+      transform: none;
+  }
+}
 /* Media query for mobile view */
 @media (max-width: 768px) {
   /* Hide the default navbar links */
@@ -95,11 +139,12 @@ html::-webkit-scrollbar-thumb{
   .icons {
     display: block;
     cursor: pointer;
+    color: white;
   }
 
   /* Keep the external contact button visible */
   .button {
-    display: block;
+    display: none;
   }
 
   /* Style for the slider menu on mobile */
@@ -107,9 +152,9 @@ html::-webkit-scrollbar-thumb{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100px;
+    top: 70px;
     right: 0;
-    background-color: #fff;
+    background-color: #111;
     width: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
@@ -120,6 +165,7 @@ html::-webkit-scrollbar-thumb{
     width: 100%;
     text-align: center;
   }
+
 }
 
 /* Active class to display mobile navbar */
@@ -131,7 +177,7 @@ html::-webkit-scrollbar-thumb{
 #home{
     padding: 10px 70px;
     min-height: 100vh;
-    /* text-align: center; */
+    text-align: center;
     align-content: center;
     display: block;
     background: url(../images/landing.png) no-repeat;
@@ -408,23 +454,6 @@ html::-webkit-scrollbar-thumb{
   opacity: 0.1;
 }
 
-/* Responsive Button */
-#services a {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 30px;
-  background-color: #2651fc;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-#services a:hover {
-  background-color: #1a3da1;
-}
-
 #features{
     padding: 70px 30px;
     background-color: white;
@@ -491,169 +520,69 @@ font-weight: 500;
     }
 }
 
-/* #review{
-  padding: 20px;
-}
-.custom-review {
-    margin-top: 20px;
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s linear;
-    text-align: center;
-}
-
-.custom-review:hover {
-    box-shadow: 0 5px 5px rgba(17, 36, 183, 0.79);
-}
-
-.review-img-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
-}
-
-#person-img {
-    width: 100%;
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    position: relative;
-}
-
-.review-img-container::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f10e";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    transform: translateY(25%);
-    background: #3d83ff;
-    color: white;
-}
-
-.review-img-container::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #3d83ff;
-    position: absolute;
-    top: -0.25rem;
-    right: -0.5rem;
-    border-radius: 50%;
-}
-
-#review-author {
-    margin-bottom: 0.25rem;
-}
-
-#review-job {
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    color: gray;
-    font-size: 0.85rem;
-}
-
-#review-info {
-    margin-bottom: 0.75rem;
-}
-
-.prev-review-btn,
-.next-review-btn {
-    color: #3d83ff;
-    font-size: 1.25rem;
-    background: transparent;
-    border-color: transparent;
-    margin: 0 0.5rem;
-    transition: color 0.3s linear;
-    cursor: pointer;
-}
-
-.prev-review-btn:hover,
-.next-review-btn:hover {
-    color: black;
-} */
-
 #review {
   padding: 40px 20px;
+  padding-bottom: 80px;
   background-color: #fffecf;
   text-align: center;
 }
 
 .custom-review {
-  margin: 20px auto;
+  margin-top: 20px;
   background: white;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
-  max-width: 600px; /* Limit max width for better readability */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  text-align: center;
+  opacity: 1;
+  transform: translateX(0);
 }
+
+/* Animation for fading out */
+.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.review-img-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+#person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#review-author {
+  margin-bottom: 0.25rem;
+}
+
+#review-job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 0.85rem;
+}
+
+#review-info {
+  margin-bottom: 0.75rem;
+}
+
 
 .custom-review:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.custom-review {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.custom-review.show {
-  opacity: 1;
-}
-
-
-.review-img-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  overflow: hidden; /* Prevents overflow */
-  border: 2px solid #3d83ff; /* Adds a border around the image */
-}
-
-#person-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#review-author {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-  color: #333;
-}
-
-#review-job {
-  font-size: 0.9rem;
-  color: gray;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-#review-info {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-
-
 #contact {
   padding: 40px 20px;
-  background-color: #a4ceff;
 }
 
 .heading {
@@ -737,6 +666,9 @@ textarea:focus {
 .map-container h2 {
   text-align: center;
   margin-bottom: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   color: #3d83ff;
 }
 
@@ -770,6 +702,17 @@ textarea:focus {
       height: 250px; /* Adjust height for smaller screens */
   }
 }
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
+
 
 #footer {
   background-color: #1a1a1a; /* Dark background */
