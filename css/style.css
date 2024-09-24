@@ -345,6 +345,7 @@ html::-webkit-scrollbar-thumb{
   }
 
   .mission, .vision {
+    font-size: medium;
     padding: 30px;
     text-align: center;
   }
@@ -354,6 +355,7 @@ html::-webkit-scrollbar-thumb{
   }
 
   .notification {
+    font-size: medium;
     padding: 20px;
   }
 }
