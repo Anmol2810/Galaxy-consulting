@@ -340,8 +340,14 @@ html::-webkit-scrollbar-thumb{
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
+  #about{
+    padding: 20px 10px;
+  }
   .about_details {
     grid-template-columns: 1fr;
+  }
+  .notification{
+    font-size: 14px;
   }
 
   .mission, .vision {
