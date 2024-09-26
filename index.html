@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
         <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
-        <title>Galaxy Consulting.INC</title>
+        <title>Galaxy Consulting Inc.</title>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,8 +202,8 @@
             </div>
             <div class="form-container">
                 <h2>Send Us a Message</h2>
-                <form action="https://formsubmit.co/info@galaxyconsultinginc.net" method="POST">
-                    <input type="hidden" name="_next" value="https://galaxyconsultinginc.net">
+                <form id="myForm" action="https://formsubmit.co/info@galaxyconsultinginc.net" method="POST">
+                    <input type="hidden" name="_next" value="https://galaxyconsulting.netlify.app/#contact">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="name" placeholder="Your Name" required />
                     <input type="email" name="email" placeholder="Your Email" required />
@@ -212,6 +212,7 @@
                     <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
                     <button class="form-btn" type="submit">Send Message</button>
                 </form>
+                <div id="toast" class="toast">Form submitted successfully!</div>
             </div>
         </div>
     </section>
@@ -236,6 +237,9 @@
 
 
     <script src="script.js"></script>
+    <script>
+
+    </script>
     <script src="https://kit.fontawesome.com/aa5f332820.js" crossorigin="anonymous"></script>
     </body>
 </html>

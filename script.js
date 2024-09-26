@@ -98,3 +98,21 @@ function fadeOut() {
 function fadeIn() {
     reviewContainer.classList.remove("fade-out");
 }
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevent form submission
+    
+    // Show the toast
+    var toast = document.getElementById("toast");
+    toast.className = "toast show";
+
+    // Hide the toast after 3 seconds
+    setTimeout(function(){ 
+        toast.className = toast.className.replace("show", ""); 
+    }, 3000);
+
+    this.submit();
+
+    // Reset the form
+    this.reset();
+});
